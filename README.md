@@ -1,6 +1,6 @@
 # DSLogs
 
-[![CI Status](http://img.shields.io/travis/Danny Sung/DSLogs.svg?style=flat)](https://travis-ci.org/Danny Sung/DSLogs)
+[![CI Status](http://img.shields.io/travis/dannys42/DSLogs.svg?style=flat)](https://travis-ci.org/dannys42/DSLogs)
 [![Version](https://img.shields.io/cocoapods/v/DSLogs.svg?style=flat)](http://cocoapods.org/pods/DSLogs)
 [![License](https://img.shields.io/cocoapods/l/DSLogs.svg?style=flat)](http://cocoapods.org/pods/DSLogs)
 [![Platform](https://img.shields.io/cocoapods/p/DSLogs.svg?style=flat)](http://cocoapods.org/pods/DSLogs)
