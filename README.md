@@ -5,9 +5,21 @@
 [![License](https://img.shields.io/cocoapods/l/DSLogs.svg?style=flat)](http://cocoapods.org/pods/DSLogs)
 [![Platform](https://img.shields.io/cocoapods/p/DSLogs.svg?style=flat)](http://cocoapods.org/pods/DSLogs)
 
+
+## Description
+
+DSLogs provides a very simple set of macros that wrap around NSLog().
+
+When releasing apps to the App Store, it's usually good to disable NSLog().  These macros provide a simple way to manage this.
+
 ## Usage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+Code                | Console Output
+--------------------|----------------------
+DLog(@"Message");   | <FILE:LineNum> Message
+WLog(Message);      | <FILE:LineNum> WARNING: Message
+ELog(@"Message");   | <FILE:LineNum> ERROR: Message
+
 
 ## Requirements
 
@@ -18,6 +30,16 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 pod "DSLogs"
+```
+
+In your project build settings, under Custom Compiler Flags, add the following to Other C Flags:
+    Debug:      -DENABLE_LOGS=1
+    Release:    -DENABLE_LOGS=0
+
+Then in your MyApplication_Prefix.pch file, add the following:
+
+```c
+#import <DSLogs.h>
 ```
 
 ## Author

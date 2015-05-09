@@ -159,6 +159,7 @@
 		0CB9224FFA70BBD82A9B05D2 /* EXPMatchers+postNotification.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+postNotification.m"; path = "Expecta/Matchers/EXPMatchers+postNotification.m"; sourceTree = "<group>"; };
 		0FA4ED2962E4C8DEFBCD2A93 /* SPTTestSuite.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTTestSuite.m; path = Specta/Specta/SPTTestSuite.m; sourceTree = "<group>"; };
 		1386ADEBA2E497E84EF6BF90 /* libPods-DSLogs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DSLogs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		142962201AFD843F00F077A7 /* DSLogs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DSLogs.h; path = Pod/Classes/DSLogs.h; sourceTree = "<group>"; };
 		148B2BF7C7F6F4176ED0D464 /* EXPMatchers+raise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+raise.m"; path = "Expecta/Matchers/EXPMatchers+raise.m"; sourceTree = "<group>"; };
 		14E041CF50AEAB143E1034E9 /* ExpectaObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ExpectaObject.m; path = Expecta/ExpectaObject.m; sourceTree = "<group>"; };
 		15F51EE35422B6D260F88C99 /* EXPMatchers+raiseWithReason.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+raiseWithReason.m"; path = "Expecta/Matchers/EXPMatchers+raiseWithReason.m"; sourceTree = "<group>"; };
@@ -541,6 +542,7 @@
 		C6CE384A3CFF3FC7FCD0AD70 /* DSLogs */ = {
 			isa = PBXGroup;
 			children = (
+				142962201AFD843F00F077A7 /* DSLogs.h */,
 			);
 			name = DSLogs;
 			path = ../..;
