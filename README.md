@@ -17,8 +17,11 @@ When releasing apps to the App Store, it's usually good to disable NSLog().  The
 Code                | Console Output
 --------------------|----------------------
 DLog(@"Message");   | <FILE:LineNum> Message
-WLog(Message);      | <FILE:LineNum> WARNING: Message
+WLog(@"Message");   | <FILE:LineNum> WARNING: Message
 ELog(@"Message");   | <FILE:LineNum> ERROR: Message
+
+
+When ENABLE_LOGS=0, DLog() resolves to a no-op.
 
 
 ## Requirements
