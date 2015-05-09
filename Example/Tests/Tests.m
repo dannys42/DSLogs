@@ -6,39 +6,44 @@
 //  Copyright (c) 2014 Danny Sung. All rights reserved.
 //
 
+#import <DSLogs.h>
+
 SpecBegin(InitialSpecs)
-
-describe(@"these will fail", ^{
-
-    it(@"can do maths", ^{
-        expect(1).to.equal(2);
-    });
-
-    it(@"can read", ^{
-        expect(@"number").to.equal(@"string");
-    });
-    
-    it(@"will wait for 10 seconds and fail", ^{
-        waitUntil(^(DoneCallback done) {
-        
-        });
-    });
-});
 
 describe(@"these will pass", ^{
     
-    it(@"can do maths", ^{
-        expect(1).beLessThan(23);
+    it(@"check macros", ^{
+#if defined(WLog)
+        expect(1).to.equal(1);
+#else
+        expect(1).to.equal(0);
+#endif
+
+#if defined(ELog)
+        expect(1).to.equal(1);
+#else
+        expect(1).to.equal(0);
+#endif
+
+#if defined(DLog)
+        expect(1).to.equal(1);
+#else
+        expect(1).to.equal(0);
+#endif
     });
     
-    it(@"can read", ^{
-        expect(@"team").toNot.contain(@"I");
-    });
-    
-    it(@"will wait and succeed", ^{
-        waitUntil(^(DoneCallback done) {
-            done();
-        });
+    it(@"Very macro side-effects", ^{
+        int n=0;
+        
+        DLog(@"n=%d\n", n++);
+        expect(n).to.equal(0);
+        
+        WLog(@"n=%d\n", n++);
+        expect(n).to.equal(1);
+        
+        ELog(@"n=%d\n", n++);
+        expect(n).to.equal(2);
+        
     });
 });
 
