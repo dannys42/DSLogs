@@ -13,7 +13,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  DSLogs: a5e34b3decdcbdbe38a39cee2cc31b4afcdc3533
+  DSLogs: 4fbf5bd41e1ef4dfbf34c992c7acfe93cb4ea856
   Expecta: 32604574add2c46a36f8d2f716b6c5736eb75024
   Specta: 96fe05fe5c7348b5223f85e862904f6e832abb14
 
