@@ -24,16 +24,16 @@
 
 #if ENABLE_LOGS
 
-#define DLog( s, ... ) NSLog( @"<%@:%d> %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
+#define DLog( format, ... ) NSLog( @"<%@:%d> %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(format), ##__VA_ARGS__] )
 #else
 /* The while(0) is important here.  Do not change this.  For a more detailed explanation, see my blog:
  http://www.dannysung.com/wmain/software-development/multi-line-macros-in-c/
  */
-#define DLog( s, ... ) do { } while(0)
+#define DLog( format, ... ) do { } while(0)
 #endif
 
-#define ELog( s, ... ) NSLog( @"<%@:%d> ERROR: %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
-#define WLog( s, ... ) NSLog( @"<%@:%d> WARNING: %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
+#define ELog( format, ... ) NSLog( @"<%@:%d> ERROR: %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(format), ##__VA_ARGS__] )
+#define WLog( format, ... ) NSLog( @"<%@:%d> WARNING: %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(format), ##__VA_ARGS__] )
 
 
 #endif
