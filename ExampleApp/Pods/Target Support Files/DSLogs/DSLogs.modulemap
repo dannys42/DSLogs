@@ -1,0 +1,6 @@
+framework module DSLogs {
+  umbrella header "DSLogs-umbrella.h"
+
+  export *
+  module * { export * }
+}

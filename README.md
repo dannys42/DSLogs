@@ -21,7 +21,7 @@ WLog(@"Message");   | <FILE:LineNum> WARNING: Message
 ELog(@"Message");   | <FILE:LineNum> ERROR: Message
 
 
-When ENABLE_LOGS=0, DLog() resolves to a no-op.
+When ENABLE_LOGS is not specified, DLog() resolves to a no-op.
 
 
 ## Requirements
@@ -35,15 +35,29 @@ it, simply add the following line to your Podfile:
 pod "DSLogs"
 ```
 
-In your project build settings, under Custom Compiler Flags, add the following to Other C Flags:
+To enable DLog(), you will need to add some compile-time settings.  Go to your project build settings.
+
+For Objective-C, under Custom Compiler Flags, add the following to Other C Flags:
     Debug:      -DENABLE_LOGS=1
     Release:    -DENABLE_LOGS=0
 
-Then in your MyApplication_Prefix.pch file, add the following:
+For Swift, under Custom Flags, add the following to your Active Compilation Conditoins:
+    Debug:      ENABLE_LOGS
+
+Note that for swift 
+
+For Objective-C, you should add the following to a common header file:
 
 ```c
 #import <DSLogs.h>
 ```
+
+For Swift, you will need to add the following where you expect to use DSLogs:
+
+```swift
+import DSLogs
+```
+
 
 ## Author
 

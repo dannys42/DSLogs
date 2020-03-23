@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "DSLogs"
-  s.version          = "0.1.0"
+  s.version          = "0.2.0"
   s.summary          = "A simple set of debug/warning/error macros for iOS"
   s.description      = <<-DESC
                        Provides a simple set of logging functions:
@@ -22,12 +22,13 @@ Pod::Spec.new do |s|
   s.license          = 'MIT'
   s.author           = { "Danny Sung" => "danny@dannysung.com" }
   s.source           = { :git => "https://github.com/dannys42/DSLogs.git", :tag => s.version.to_s }
+  s.swift_version    = '5.1'
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '10.0'
   s.requires_arc = true
 
-  s.source_files = 'Pod/Classes/**/*'
+  s.source_files = 'Pod/Classes/**/*.{m,h,swift}'
   s.resource_bundles = {
     'DSLogs' => ['Pod/Assets/*.png']
   }
