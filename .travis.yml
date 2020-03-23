@@ -5,15 +5,11 @@
 os: osx
 language: objective-c
 cache: cocoapods
-podfile: ExampleApp/Podfile
-xcode_workspace: ExampleApp/ExampleApp.xcworkspace
-xcode_scheme: ExampleApp
-xcode_destination: platform=iOS Simulator OS=10.0 name=iPhone 11
 before_install:
 - gem install cocoapods # Since Travis is not always on latest version
 - pod install --project-directory=ExampleApp
 install:
 - gem install xcpretty --no-document --quiet
 script:
+- set -o pipefail && xcodebuild test -workspace ExampleApp/ExampleApp.xcworkspace -scheme ExampleApp -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone X,OS=13.2'  ONLY_ACTIVE_ARCH=NO | xcpretty -c
 - pod lib lint --quick
-  #- set -o pipefail && xcodebuild test -workspace ExampleApp/ExampleApp.xcworkspace -scheme ExampleApp -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
